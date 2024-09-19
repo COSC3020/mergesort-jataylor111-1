@@ -27,7 +27,7 @@ markdown file.
 
 
 
-
+I wasn't sure how the different declarations worked so I used this reddit forum link (https://www.reddit.com/r/javascript/comments/a50jte/is_it_best_to_use_var_or_let_in_for_loop/) for answers 
 
 I used wikipedia at this link (https://en.wikipedia.org/wiki/Merge_sort) to get the steps of the process down.
 
