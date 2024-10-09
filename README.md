@@ -17,7 +17,7 @@ markdown file.
 
 -------------------------------------------------
 
-I believe that my iterative mergesort should be $O(n^2log(n))$
+I believe that my iterative mergesort should be $\Theta(n^2log(n))$
 
 the first thing it does is check if the array is either emtpy or of size 1 which is a constant +1
 
@@ -25,7 +25,7 @@ This is because when it starts it enters two for loops based on the length of th
 
 After that it enters a while loop which runs until we can no longer split the array into halves, which is $log(n)$.  It also contains another for loop but as it is less than the $log(n)$ complexity it won't change it.
 
-so we have a complexity of $O(n*n\*log(n) + 1)$ = $O(n^2log(n))$
+so we have a complexity of $\Theta(n*n\*log(n) + 1)$ = $\Theta(n^2log(n))$
 
 
 I wasn't sure how the different declarations worked in for loops so I used this reddit forum link (https://www.reddit.com/r/javascript/comments/a50jte/is_it_best_to_use_var_or_let_in_for_loop/) for answers.
