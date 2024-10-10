@@ -21,9 +21,13 @@ I believe that my iterative mergesort should be $\Theta(n^2log(n))$
 
 the first thing it does is check if the array is either emtpy or of size 1 which is a constant +1
 
-This is because when it starts it enters two for loops based on the length of the array, which gives a complexity of $n*n$ or $n^2$
+Then on line 8 there is the first for loop that runs the length of the array giving a complexity of $n$
 
-After that it enters a while loop which runs until we can no longer split the array into halves, which is $log(n)$.  It also contains another for loop but as it is less than the $log(n)$ complexity it won't change it.
+And on line 9 it immedietly enters a second for loop that also runs the length of the array giving another $n$
+
+After that it enters a while loop on line 30 which runs until we can no longer split the array into halves, which is $log(n)$.  
+
+This while loop also contains another for loop at line 36 but it has a constant run time so it is "consumed" by the $log(n)$
 
 so we have a complexity of $\Theta(n*n\*log(n) + 1)$ = $\Theta(n^2log(n))$
 
