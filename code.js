@@ -5,8 +5,8 @@ function mergesort(array) {
     }
 
     // Enter Mergesort
-    for(var i = 1; i <= array.length - 1; i = 2*i) { 
-        for(var j = 0; j < array.length - 1; j += 2*i) {
+    for(var i = 1; i <= array.length - 1; i = 2*i) { // Runs length of array, complexity of n
+        for(var j = 0; j < array.length - 1; j += 2*i) { // Also runs length of array, another complexity of n
             // Set right side, left side, end of the first split and the beginning of the second split
             let right = (2*i + j) - 1;
             let left = j;
@@ -27,13 +27,13 @@ function mergesort(array) {
             let mid2 = mid + 1;
 
             // Splitting and Sorting
-            while (left <= mid && mid2 <= right) {
+            while (left <= mid && mid2 <= right) { // Splitting in two and creates a complexity of log(n)
                 if (array[left] <= array[mid2]) {
                     left++;
                 }
                 else {
                     let tmp = array[mid2];
-                    for (var k = mid2; k != left; k--) {
+                    for (var k = mid2; k != left; k--) { // Since left is constant this gives a constant complexity and is consumed by the log(n)
                         array[k] = array[k-1];
                     }
                     array[left] = tmp;
