@@ -5,8 +5,10 @@ function mergesort(array) {
     }
 
     // Enter Mergesort
-    for(var i = 1; i <= array.length - 1; i = 2*i) { // Runs length of array, complexity of n
-        for(var j = 0; j < array.length - 1; j += 2*i) { // Also runs length of array, another complexity of n
+    for(var i = 1; i <= array.length - 1; i = 2*i) { // Doesn't reach every element of the array, but instead increases by a factor of 2 each time.  This
+                                                    // is what makes a complexity of "log(n)" since it isn't a direct iteration.  Not the while loop.
+        for(var j = 0; j < array.length - 1; j += 2*i) { // Since this is going to compare every value in the array it will still be a complexity of "n"
+            
             // Set right side, left side, end of the first split and the beginning of the second split
             let right = (2*i + j) - 1;
             let left = j;
@@ -27,7 +29,8 @@ function mergesort(array) {
             let mid2 = mid + 1;
 
             // Splitting and Sorting
-            while (left <= mid && mid2 <= right) { // Splitting in two and creates a complexity of log(n)
+            while (left <= mid && mid2 <= right) { // At it's worse this loop will interact with the every single element of the array to
+                                                  // compare in order to combine, which is a complexity of "n" similar to the second for loop above.
                 if (array[left] <= array[mid2]) {
                     left++;
                 }
